@@ -1,0 +1,7 @@
+#project-card {
+  background-color: red;
+}
+
+a.active {
+  background-color: rgb(0, 255, 85);
+}

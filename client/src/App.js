@@ -6,23 +6,19 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-const props = {};
+const props = {
+  projectName: "Ed's App",
+  technologies: ["react", "express", "postgress"],
+  githubLink: "https://www.github.com",
+  description:
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque molestias fugiat ullam. Dolor, eveniet aliquid rem illo cumque tenetur autem fugiat asperiores dolores voluptatem porro pariatur! Expedita cupiditate neque dicta!",
+  imgSrc: "",
+};
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
-      <Route
-        index
-        element={
-          <ProjectCard
-            projectName="some project"
-            technologies={["react"]}
-            githubLink="www.github.com"
-            description="just some project"
-            status={true}
-            imgSrc="lol.png"
-          />
-        }
-      />
+      <Route index element={<ProjectCard {...props} />} />
     </Route>
   )
 );
